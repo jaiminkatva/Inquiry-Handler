@@ -1,0 +1,49 @@
+<%- include('header') %> <%- include('sidebar') %>
+
+<!-- Content Header (Page header) -->
+<div class="content-header"></div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<div class="content">
+  <div class="container">
+    <div class="mx-auto border border-secondary border-3 p-3 mb-3">
+      <div class="users">
+        <h2 class="col-sm-10 text-info p-3">
+          <i class="fa fa-star text-info"></i>
+          College Request Details
+        </h2>
+      </div>
+      <table class="table table-bordered">
+        <tr>
+          <th>College Name</th>
+          <td colspan="7"><%= users.collegeName %></td>
+        </tr>
+        <tr>
+          <th>Mobile Number</th>
+          <td colspan="2"><%= users.mobile %></td>
+          <th>Email Id</th>
+          <td colspan="4"><%= users.email %></td>
+        </tr>
+        <tr>
+          <th>Faculties</th>
+          <td colspan="2"><%= users.faculty %></td>
+          <th>Branches</th>
+          <td colspan="2"><%= users.branch %></td>
+          <th>Courses</th>
+          <td colspan="2"><%= users.course %></td>
+        </tr>
+        <tr>
+          <th>Address</th>
+          <td colspan="7"><%= users.address %></td>
+        </tr>
+        <tr>
+          <th>Question</th>
+          <td colspan="7"><%= users.question %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%- include('footer') %>

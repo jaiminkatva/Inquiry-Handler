@@ -1,0 +1,55 @@
+<%- include('header') %>
+<!-- Main content -->
+<div class="content">
+  <div class="container">
+    <div
+      class="col-sm-8 mx-auto p-3 border border-dark bg-white elevation-3"
+      style="border-radius: 20px"
+    >
+      <h2
+        class="text-info border border-dark text-center p-3"
+        style="border-radius: 20px"
+      >
+        Add Remark
+      </h2>
+      <form class="text-center" method="post">
+        <div class="mb-3 mt-3 row">
+          <label for="formNo" class="col-sm-2 col-form-label"
+            >Form No</label
+          >
+          <div class="col-sm-4">
+            <input
+              type="text"
+              class="form-control"
+              name="student"
+              id="student"
+              maxlength="12"
+              value="<%= user.formNo %>"
+            />
+          </div>
+        </div>
+        <div class="mb-3 mt-3 row">
+          <label for="remarks" class="col-sm-2 col-form-label"
+            >Remark</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              name="remarks"
+              id="remarks"
+              placeholder="Enter Remarks"
+              required
+            />
+          </div>
+        </div>
+        <hr />
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- /.row -->
+  <!-- /.container-fluid -->
+</div>
+<!-- /.content -->
+<%- include('footer') %>

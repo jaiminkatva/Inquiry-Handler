@@ -1,0 +1,129 @@
+<%- include('header') %>
+<!-- Main content -->
+<div class="content">
+  <div class="container">
+    <% if(message){ %>
+    <div style="z-index: 5" class="fixedbutton p-1 rounded-3">
+      <div
+        id="message"
+        class="alert alert-<%= message.type %> alert-dismissible"
+      >
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-hidden="true"
+        >
+          &times;
+        </button>
+        <h5><i class="icon fas fa-check"></i> Alert!</h5>
+        <%= message.message %>
+      </div>
+    </div>
+    <% } %>
+    <div class="mx-auto">
+      <div class="row">
+        <h2 class="col-sm-10 text-info p-3">Inquiry Data</h2>
+        <p class="col-sm-2 text-dark text-center p-3 align-middle">
+          Total Inquiry : <%= total_inquiry %>
+        </p>
+      </div>
+      <% if(user != ''){ %>
+      <table id="example1" class="table">
+        <thead>
+          <tr>
+            <th scope="col">*</th>
+            <th scope="col">Form No</th>
+            <th scope="col">Date</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Mobile No</th>
+            <th scope="col">Form Filled By</th>
+            <th scope="col">Confirm Branch</th>
+            <th scope="col">Conformation</th>
+            <th scope="col">Remarks</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% user.forEach((row, index)=>{ %>
+          <tr>
+            <th><%= index+1 %></th>
+            <th><%= row.formNo %></th>
+            <th><%= moment(row.date).utcOffset(330).format('DD-MM-YYYY') %></th>
+            <td><%= row.fullName %></td>
+            <td><%= row.mobileNo %></td>
+            <td><%= row.formFilledBy %></td>
+            <td><%= row.priority_one %></td>
+            <td>
+              <% if(row.status == "Admitted"){ %>
+              <span class="badge bg-success">Admitted</span>
+              <% }else if(row.status == "Pending"){ %>
+              <span class="badge bg-warning">Pending</span>
+              <% }else{ %>
+              <span class="badge bg-danger">Cancel</span>
+              <% } %> <% if(row.status == "Admitted"){ %>
+              <a
+                href="/counselor-edit/<%= row._id %>"
+                class="btn text-success p-1 disabled"
+                aria-disabled="true"
+                ><i class="fas fa-edit fs-lg mx-1"></i
+              ></a>
+              <% }else{ %>
+              <a
+                href="/counselor-edit/<%= row._id %>"
+                class="btn text-success p-1"
+                ><i class="fas fa-edit fs-lg mx-1"></i
+              ></a>
+              <%}%>
+            </td>
+            <td>
+              <a href="/remarks/<%= row._id %>" class="text-success p-1"
+                >Add <i class="fas fa-pen"></i
+              ></a>
+            </td>
+            <td>
+              <div class="btn-group">
+                <button class="btn btn-sm btn-outline-info">More</button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-info"
+                  data-toggle="dropdown"
+                >
+                  <i class="fa fa-ellipsis-v p-1"></i>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                  <div class="dropdown-item">
+                    <a
+                      href="/counselor-all-edit/<%= row._id %>"
+                      class="text-warning p-1"
+                      title="Edit Inquiry"
+                      ><i class="fa fa-pen"></i> Edit</a
+                    >
+                  </div>
+                  <div class="dropdown-item">
+                    <a
+                      href="/counselor-show/<%= row._id %>"
+                      class="text-success p-1"
+                      title="Inquiry Details"
+                      ><i class="fa fa-eye"></i> Show</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <% }else{ %>
+      <h1 class="text-center text-secondary mt-5">
+        No user found in the database
+      </h1>
+      <% } %>
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</div>
+<!-- /.content -->
+
+<%- include('footer') %>

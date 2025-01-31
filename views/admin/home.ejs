@@ -1,0 +1,162 @@
+<%- include('header') %> <%- include('sidebar') %>
+<div class="content-header">
+  <div class="container-fluid">
+    <!-- header space -->
+    <h2 class="text-center text-dark p-2 border border-dark">
+      <%= locals.collegeName %>
+    </h2>
+  </div>
+</div>
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-info">
+          <div class="inner">
+            <h3><%= total_inquiry %></h3>
+
+            <p>Inquiries</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-question"></i>
+          </div>
+          <a href="/inquiries" class="small-box-footer">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-success">
+          <div class="inner">
+            <h3><%= total_faculty %></h3>
+
+            <p>Faculty</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <a href="/faculty-list" class="small-box-footer">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-warning">
+          <div class="inner">
+            <h3><%= total_counselor %></h3>
+
+            <p>Counselors</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <a href="/counselor-list" class="small-box-footer">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-danger">
+          <div class="inner">
+            <h3><%= total_branch %></h3>
+
+            <p>Branches</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <a href="/branch-list" class="small-box-footer">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+    </div>
+    <h3 class="text-info p-2">Inquiry Statistics</h3>
+    <div class="row">
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-gray">
+          <div class="inner">
+            <h3><%= total_unappointed_inq %></h3>
+
+            <p>Unappointed Inquiries</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <a href="/admin/inquiry-data" class="small-box-footer">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-success">
+          <div class="inner">
+            <h3><%= total_admitted_inq %></h3>
+
+            <p>Admitted Inquiries</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-check"></i>
+          </div>
+          <a href="/admin_admitted_inq" class="small-box-footer">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-warning">
+          <div class="inner">
+            <h3><%= total_pending_inq %></h3>
+
+            <p>Pending Inquiries</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <a href="/admin_pending_inq" class="small-box-footer">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-danger">
+          <div class="inner">
+            <h3><%= total_cancelled_inq %></h3>
+
+            <p>Cancelled Inquiries</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-times"></i>
+          </div>
+          <a href="/admin_cancel_inq" class="small-box-footer">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+</div>
+
+<!-- /.content-wrapper -->
+<%- include("footer") %>

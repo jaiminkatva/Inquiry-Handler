@@ -1,0 +1,82 @@
+<%- include("header") %> <%- include("sidebar") %>
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid"></div>
+    <!-- /.container-fluid -->
+  </section>
+  <!-- Main content -->
+  <div class="content">
+    <div class="container">
+      <% if(message){ %>
+      <div style="z-index: 5" class="fixedbutton p-1 rounded-3">
+        <div
+          id="message"
+          class="alert alert-<%= message.type %> alert-dismissible"
+        >
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-hidden="true"
+          >
+            &times;
+          </button>
+          <h5><i class="icon fas fa-check"></i> Alert!</h5>
+          <%= message.message %>
+        </div>
+      </div>
+      <% } %> <% if(users != ''){ %>
+      <div class="row">
+        <h2 class="col-sm-10 text-primary">Inquiry Data</h2>
+        <p class="col-sm-2 text-dark text-center align-middle">
+          Total Inquiry : <%= total_inquiry %>
+        </p>
+      </div>
+      <table
+        id="example1"
+        class="table table-bordered table-striped text-center"
+      >
+        <thead>
+          <tr>
+            <th scope="col">Form No</th>
+            <th scope="col">Date</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Mobile No</th>
+            <th scope="col">Parents Mobile No</th>
+            <th scope="col">Appointed Counselor</th>
+            <th scope="col">Appoint</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach((row, index)=>{ %>
+          <tr>
+            <th><%= row.formNo %></th>
+            <th><%= moment(row.date).utcOffset(330).format('DD-MM-YYYY') %></th>
+            <td><%= row.fullName %></td>
+            <td><%= row.mobileNo %></td>
+            <td><%= row.parentsMobileNo %></td>
+            <td><%= row.counselorName %></td>
+            <td>
+              <a href="/admin/edit/<%= row._id %>" class="btn btn-outline-warning"
+                ><i class="fa fa-edit"></i
+              ></a>
+            </td>
+            <td>
+              <a href="/admin/show/<%= row._id %>" class="btn btn-outline-success"
+                ><i class="fa fa-eye"></i
+              ></a>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <% }else{ %>
+      <h1 class="text-center text-secondary mt-5">No Inquiry found</h1>
+      <% } %>
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.content -->
+</div>
+<%- include("footer") %>

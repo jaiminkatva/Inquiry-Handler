@@ -1,0 +1,60 @@
+<%- include('header') %>
+<!-- Main content -->
+<div class="content">
+  <div class="container">
+    <div
+      class="col-sm-8 mx-auto p-3 border border-dark bg-white elevation-3"
+      style="border-radius: 20px"
+    >
+      <h2
+        class="text-info border border-dark text-center p-3"
+        style="border-radius: 20px"
+      >
+        Inquiry Conformation
+      </h2>
+      <form class="text-center" method="post">
+        <div class="mb-3 mt-3 row">
+          <label for="priority_one" class="col-sm-2 col-form-label"
+            >Branch Name</label
+          >
+          <div class="col-sm-4">
+            <select class="form-control" id="priority_one" name="priority_one">
+              <option value="<%= users.priority_one %>"><%= users.priority_one %></option>
+              <option value="<%= users.priority_two %>"><%= users.priority_two %></option>
+              <option value="<%= users.priority_three %>">
+                <%= users.priority_three %>
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3 mt-3 row">
+          <label for="status" class="col-sm-2 col-form-label">Status</label>
+          <div class="col-sm- black 4 border-radius: 20px;">
+            <select class="form-control" id="status" name="status">
+              <% if(users.status == "Admitted"){ %>
+              <option value="Admitted" selected>Admitted</option>
+              <option value="Pending">Pending</option>
+              <option value="Cancel">Cancel</option>
+              <% } else if(users.status == "Cancel") {%>
+              <option value="Admitted">Admitted</option>
+              <option value="Pending">Pending</option>
+              <option value="Cancel" selected>Cancel</option>
+              <% } else{ %>
+              <option value="Admitted">Admitted</option>
+              <option value="Pending" selected>Pending</option>
+              <option value="Cancel">Cancel</option>
+              <% } %>
+            </select>
+          </div>
+        </div>
+
+        <hr />
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- /.row -->
+  <!-- /.container-fluid -->
+</div>
+<!-- /.content -->
+<%- include('footer') %>

@@ -1,0 +1,263 @@
+<%- include('header') %> <%- include('sidebar') %>
+  <div class="bg-light p-3">
+    <h2
+      class="bg-info border border-info p-2 mt-2"
+      style="border-radius: 10px 10px 0px 0px"
+    >
+      Edit Inquiry Form
+    </h2>
+    <form class="border border-info p-3" method="post">
+      <h4 class="text-left text-info">
+        <i class="fas fa-user m-1"></i> Personal Details
+      </h4>
+      <hr class="border-info"/>
+      <div class="mb-3 mt-3 row">
+        <label for="fullName" class="col-sm-2 col-form-label">Full Name</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            name="fullName"
+            id="fullName"
+            minlength="5"
+            maxlength="150"
+            value="<%= users.fullName %>"
+            required
+          />
+        </div>
+      </div>
+      <div class="mb-3 mt-3 row">
+        <label for="mobileNo" class="col-sm-2 col-form-label">Mobile No</label>
+        <div class="col-sm-4">
+          <input
+            type="text"
+            class="form-control"
+            name="mobileNo"
+            id="mobileNo"
+            pattern="[0-9]{10}"
+            title="Please enter a 10-digit mobile number"
+            value="<%= users.mobileNo %>"
+            required
+          />
+        </div>
+        <label for="parentsMobileNo" class="col-sm-2 col-form-label"
+          >Parents Mobile No</label
+        >
+        <div class="col-sm-4">
+          <input
+            type="text"
+            class="form-control"
+            name="parentsMobileNo"
+            id="parentsMobileNo"
+            pattern="[0-9]{10}"
+            title="Please enter a 10-digit mobile number"
+            value="<%= users.parentsMobileNo %>"
+            required
+          />
+        </div>
+       
+      </div>
+        <div class="mb-3 mt-3 row">
+        <label for="address" class="col-sm-2 col-form-label">Address</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            name="address"
+            id="address"
+            maxlength="300"
+            value="<%= users.address %>"
+            required
+          />
+        </div>
+      </div>
+      <hr class="border-info"/>
+      <h4 class="text-left text-info">
+        <i class="fas fa-user-graduate m-1"></i> Eduction Details
+      </h4>
+      <hr class="border-info"/>
+      <div class="mb-3 mt-3 row">
+        <label for="board" class="col-sm-4 col-form-label">Board</label>
+        <div class="col-sm-8">
+          <select class="form-control" id="board" name="board">
+            <% if(users.board == "GSEB"){ %>
+            <option value="GSEB" selected>GSEB</option>
+            <option value="CBSE">CBSE</option>
+            <option value="GU">GU</option>
+            <option value="GTU">GTU</option>
+            <option value="Other">Other</option>
+            <% } else if(users.board == "CBSE") {%>
+            <option value="GSEB">GSEB</option>
+            <option value="CBSE" selected>CBSE</option>
+            <option value="GU">GU</option>
+            <option value="GTU">GTU</option>
+            <option value="Other">Other</option>
+            <% } else if(users.board == "GU") {%>
+            <option value="GSEB">GSEB</option>
+            <option value="CBSE">CBSE</option>
+            <option value="GU" selected>GU</option>
+            <option value="GTU">GTU</option>
+            <option value="Other">Other</option>
+            <% } else if(users.board == "GTU") {%>
+            <option value="GSEB">GSEB</option>
+            <option value="CBSE" selected>CBSE</option>
+            <option value="GU">GU</option>
+            <option value="GTU" selected>GTU</option>
+            <option value="Other">Other</option>
+            <% } else{ %>
+            <option value="GSEB">GSEB</option>
+            <option value="CBSE">CBSE</option>
+            <option value="GU">GU</option>
+            <option value="GTU">GTU</option>
+            <option value="Other" selected>Other</option>
+            <% } %>
+          </select>
+        </div>
+      </div>
+      <div class="mb-3 mt-3 row">
+        <label for="schoolName" class="col-sm-4 col-form-label"
+          >School / college Name</label
+        >
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            name="schoolName"
+            id="schoolName"
+            maxlength="100"
+            value="<%= users.schoolName %>"
+            required
+          />
+        </div>
+      </div>
+      <div class="mb-3 mt-3 row">
+        <label for="seat_no" class="col-sm-4 col-form-label"
+          >Seat No / Enrollment No</label
+        >
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            name="seat_no"
+            id="seat_no"
+            maxlength="15"
+            value="<%= users.seat_no %>"
+            required
+          />
+        </div>
+      </div>
+      <div class="mb-3 mt-3 row">
+        <label for="result" class="col-sm-4 col-form-label">Result</label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            name="result"
+            id="result"
+            maxlength="10"
+            value="<%= users.result %>"
+            required
+          />
+        </div>
+      </div>
+      <hr class="border-info"/>
+      <h4 class="text-left text-info">
+        <i class="fas fa-check-circle m-1"></i> Confirmation
+      </h4>
+      <hr class="border-info"/>
+      <div class="mb-3 mt-3 row">
+        <label for="admission_category" class="col-sm-2 col-form-label"
+        >Course Name</label
+      >
+      <div class="col-sm-8">
+          <select
+            class="form-control"
+            id="admission_category"
+            name="admission_category"
+          >
+          <% courses.forEach(function(row){ %>
+            <option value="<%= row.courseName %>" <% if (row.courseName === users.admission_category) { %>selected<% } %> ><%= row.courseName %></option>
+          <% }) %>
+          </select>
+      </div>
+       
+      </div>
+      <div class="mb-3 mt-3 row">
+        <label for="result" class="col-sm-2 col-form-label"
+          >Confirm Branch</label
+        >
+        <div class="col-sm-8">
+            <select
+              class="form-control"
+              id="priority_one"
+              name="priority_one"
+            >
+            <% branches.forEach(function(row){ %>
+                <option value="<%= row.branchName %>" <% if (row.branchName === users.priority_one) { %>selected<% } %> ><%= row.branchName %></option>
+              <% }) %>
+            </select>
+          </div>
+      </div>
+      <div class="mb-3 mt-3 row">
+        <label for="result" class="col-sm-2 col-form-label">Status</label>
+        <div class="col-sm-8">
+          <select class="form-control" id="status" name="status">
+            <% if(users.status == "Admitted"){ %>
+            <option value="Admitted" selected>Admitted</option>
+            <option value="Pending">Pending</option>
+            <option value="Cancel">Cancel</option>
+            <% } else if(users.status == "Cancel") {%>
+            <option value="Admitted">Admitted</option>
+            <option value="Pending">Pending</option>
+            <option value="Cancel" selected>Cancel</option>
+            <% } else { %>
+            <option value="Admitted">Admitted</option>
+            <option value="Pending" selected>Pending</option>
+            <option value="Cancel">Cancel</option>
+            <% } %>
+          </select>
+        </div>
+      </div>
+      <div class="mb-3 mt-3 row">
+        <label for="result" class="col-sm-2 col-form-label">Form Fill By</label>
+        <div class="col-sm-4">
+          <input
+            type="text"
+            class="form-control"
+            name="formFilledBy"
+            id="formFilledBy"
+            maxlength="10"
+            value="<%= users.formFilledBy %>"
+            readonly
+          />
+        </div>
+        <label for="result" class="col-sm-2 col-form-label">Counselor</label>
+        <div class="col-sm-4">
+          <select class="form-control" id="counselorName" name="counselorName">
+            <option value="">Select...</option>
+            <% counselors.forEach((row) => { %>
+              <option value="<%= row.counselorName %>" <% if (row.counselorName === users.counselorName) { %>selected<% } %> ><%= row.counselorName %></option>
+            <% }); %>
+          </select>
+        </div>
+      </div>
+      <div class="mb-3 mt-3 row">
+        <label for="result" class="col-sm-2 col-form-label">Reference Name</label>
+        <div class="col-sm-4">
+          <input
+            type="text"
+            class="form-control"
+            name="referenceName"
+            id="referenceName"
+            maxlength="10"
+            value="<%= users.referenceName %>"
+            readonly
+          />
+        </div>
+      </div>
+      <hr class="border-info" />
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+<!-- /.content-wrapper -->
+<%- include("footer") %>

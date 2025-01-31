@@ -1,0 +1,79 @@
+<%- include('header') %>
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header"></div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="container">
+      <div class="mx-auto border border-secondary border-3 p-3 mb-3">
+        <div class="users">
+          <h2 class="col-sm-10 text-info p-3">
+            <i class="fa fa-star text-info"></i>
+            Form No : <%= users.formNo %> (<%= users.admission_category %>)
+          </h2>
+        </div>
+        <table class="table">
+          <tr>
+            <th>Full Name</th>
+            <td><%= users.fullName %></td>
+            <th>Counselor</th>
+            <td><%= users.counselorName %></td>
+          </tr>
+          <tr>
+            <th>Mobile No</th>
+            <td><%= users.mobileNo %></td>
+            <th>Parents Mobile No</th>
+            <td><%= users.parentsMobileNo %></td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td colspan="3"><%= users.address %></td>
+          </tr>
+        </table>
+        <h2 class="col-sm-10 text-info p-3">
+          <i class="fa fa-user-graduate text-info"></i>
+          Eduction Details
+        </h2>
+        <table class="table">
+          <tr>
+            <th>Board / University</th>
+            <td><%= users.board %></td>
+            <th>School / college</th>
+            <td><%= users.schoolName %></td>
+          </tr>
+          <tr>
+            <th>Seat No. / Enrollment No.</th>
+            <td><%= users.seat_no %></td>
+            <th>Result</th>
+            <td><%= users.result %></td>
+          </tr>
+        </table>
+        <h2 class="col-sm-10 text-info p-3">
+          <i class="fa fa-level-up-alt"></i>
+          Course Priority
+        </h2>
+        <table class="table">
+          <tr>
+            <th>Priority 1</th>
+            <th>Priority 2</th>
+            <th>Priority 3</th>
+          </tr>
+          <tr>
+            <td><%= users.priority_one %></td>
+            <td><%= users.priority_two %></td>
+            <td><%= users.priority_three %></td>
+          </tr>
+          <tr>
+            <th>Reference</th>
+            <td colspan="2"><%= users.referenceName %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('footer') %>

@@ -1,0 +1,120 @@
+<%- include("header") %> <%- include("sidebar") %>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <div class="container-fluid"></div>
+  <!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card" id="pdfForm">
+          <div class="users">
+            <h3 class="col-sm-10 text-info p-3">
+              <i class="fa fa-user-graduate"></i>
+              Student <%= users.formNo %> (<%= users.admission_category %>)
+            </h3>
+          </div>
+          <table class="table">
+            <tr>
+              <th scope="col">Full Name</th>
+              <td colspan="5"><%= users.fullName %></td>
+            </tr>
+            <tr>
+              <th scope="col">Mobile No</th>
+              <td><%= users.mobileNo %></td>
+              <th scope="col">Parents Mobile No</th>
+              <td><%= users.parentsMobileNo %></td>
+            </tr>
+            <tr>
+              <th scope="col">Address</th>
+              <td colspan="5"><%= users.address %></td>
+            </tr>
+            <tr>
+              <th scope="col">Form Filled By</th>
+              <td><%= users.formFilledBy %></td>
+              <th scope="col">Counselor</th>
+              <td><%= users.counselorName %></td>
+            </tr>
+            <tr>
+              <th scope="col">Reference</th>
+              <td colspan="5"><%= users.referenceName %></td>
+            </tr>
+          </table>
+          <h3 class="col-sm-10 text-info p-3">
+            <i class="fa fa-graduation-cap"></i>
+            Eduction Details
+          </h3>
+          <table class="table">
+            <tr>
+              <th scope="col">Board / University</th>
+              <td><%= users.board %></td>
+              <th scope="col">School / college</th>
+              <td><%= users.schoolName %></td>
+            </tr>
+            <tr>
+              <th scope="col">Seat No. / Enrollment No.</th>
+              <td><%= users.seat_no %></td>
+              <th scope="col">Result</th>
+              <td><%= users.result %></td>
+            </tr>
+          </table>
+          <h3 class="col-sm-10 text-info p-3">
+            <i class="fa fa-check-circle"></i>
+            Confirmation
+          </h3>
+          <table class="table">
+            <tr>
+              <th scope="col" class="col-sm-4">Confirm Branch</th>
+              <td><%= users.priority_one %></td>
+            </tr>
+          </table>
+          <h3 class="col-sm-10 text-info p-3">
+            <i class="fa fa-check-circle"></i>
+            Status
+          </h3>
+          <table class="table">
+            <tr>
+              <th scope="col" class="col-sm-4">Status</th>
+              <td scope="col"><%= users.status %></td>
+            </tr>
+          </table>
+          <h3 class="col-sm-10 text-info p-3">
+            <i class="fa fa-check-circle"></i>
+            Remarks
+          </h3>
+          <table class="table">
+            <% let remarksFound = false; data.forEach((remark) => { if
+            (users.formNo === remark.student) { remarksFound = true; %>
+            <tr>
+              <td class="col-sm-8"><%= remark.remarks %></td>
+              <td>
+                <%= moment(remark.date).utcOffset(330).format('DD-MM-YYYY') %>
+              </td>
+              <!-- <td><a href="/remarks/remove/<%= remark._id %>" class="btn btn-danger">Delete</a></td> -->
+            </tr>
+            <% } }); if (!remarksFound) { %>
+            <tr>
+              <td colspan="2">Remarks not found.</td>
+            </tr>
+            <% } %>
+          </table>
+        </div>
+        <!-- /.card -->
+        <button class="btn btn-primary m-3 float-right" onclick="generatePDF()">
+          Download as PDF
+        </button>
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+<%- include("footer") %>

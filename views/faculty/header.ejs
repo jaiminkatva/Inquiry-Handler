@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="/images/ih-logo.png">
+        <title><%= title %></title>
+    
+        <!-- Google Font: Source Sans Pro -->
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+        />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css" />
+        <!-- Ionicons -->
+        <link
+          rel="stylesheet"
+          href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+        />
+        <!-- Tempusdominus Bootstrap 4 -->
+        <link
+          rel="stylesheet"
+          href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+        />
+        <!-- iCheck -->
+        <link
+          rel="stylesheet"
+          href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+        />
+        <!-- JQVMap -->
+        <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css" />
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../dist/css/adminlte.min.css" />
+        <!-- overlayScrollbars -->
+        <link
+          rel="stylesheet"
+          href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+        />
+        <!-- Daterange picker -->
+        <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css" />
+        <!-- summernote -->
+        <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css" />
+        <!-- data table -->
+        <link
+          rel="stylesheet"
+          href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css"
+        />
+        <style>
+          .fixedbutton {
+            position: fixed;
+            right: 0px;
+          }
+        </style>
+      </head>
+<body class="hold-transition layout-top-nav">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white p-3">
+    <div class="container">
+      <a href="/faculty-dashboard" class="navbar-brand">
+        <img src="../../images/ih-logo.png" alt="IH Logo" class="brand-image img-circle elevation-2" style="opacity: .8">
+        <span class="brand-text text-info">Inquiry Handler</span>
+      </a>
+
+      <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="/inquiry-form" class="nav-link">Inquiry Form</a>
+          </li>
+          <li class="nav-item">
+            <a href="/faculty/inquiry-data" class="nav-link">Appoint Counselor</a>
+          </li>
+        </ul>
+
+      <!-- Right navbar links -->
+      <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link btn text-light btn-danger" data-toggle="dropdown" href="#">
+              <i class="far fa-user m-1"></i> <span><%= locals.facultyName %></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="/counselor-logout" class="dropdown-item text-danger m-0">
+                <i class="fas fa-power-off mr-2"></i> Logout
+              </a>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- /.navbar -->

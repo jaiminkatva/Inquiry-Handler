@@ -1,0 +1,103 @@
+<%- include("header") %> <%- include("sidebar") %>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Colleges</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Colleges</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">College List</h3>
+            <a href="/addAdmin" class="btn btn-primary float-right"
+              ><i class="fa fa-plus-circle"></i> Add College
+            </a>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <% if(users != ''){ %>
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr class="text-center">
+                  <th>*</th>
+                  <th>User Name</th>
+                  <th>College Name</th>
+                  <th>Mobile Number</th>
+                  <th>Email</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% users.forEach((row, index)=>{ %>
+                <tr class="text-center">
+                  <th><%= index + 1 %></th>
+                  <td><%= row.userName %></td>
+                  <td><%= row.collegeName %></td>
+                  <td><%= row.mobileNo %></td>
+                  <td><%= row.email %></td>
+                  <td>
+                    <div class="btn-group">
+                      <button class="btn btn-sm btn-outline-info">More</button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-info"
+                        data-toggle="dropdown"
+                      >
+                        <i class="fa fa-ellipsis-v p-1"></i>
+                      </button>
+                      <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-item">
+                          <a
+                            href="/master/delete/<%= row._id %>"
+                            class="text-danger"
+                            onclick="return confirm('Are you sure you want to proceed?')"
+                            ><i class="fa fa-trash fs-lg mx-1"></i> Delete</a
+                          >
+                        </div>
+                        <div class="dropdown-item">
+                          <a
+                            href="/master/edit/<%= row._id %>"
+                            class="text-warning"
+                            ><i class="fa fa-pen fs-lg mx-1"></i> Edit</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <% }) %>
+              </tbody>
+            </table>
+            <% }else{ %>
+            <h3 class="text-center text-secondary mt-5">No colleges found</h3>
+            <% } %>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+
+<%- include("footer") %>

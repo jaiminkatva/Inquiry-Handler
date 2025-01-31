@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Inquiry Handler</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="images/ih-logo.png" rel="icon" />
+    <link href="images/ih-logo.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="indexAssets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="indexAssets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="indexAssets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="indexAssets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="indexAssets/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="indexAssets/css/main.css" rel="stylesheet" />
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="indexAssets/img/logo.png" alt=""> -->
+          <img src="/images/Inquiry Handler.png" alt="..." width="100px" />
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#HIW">How It Works</a></li>
+            <li><a href="#FAQ">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <div class="d-flex justify-content-center">
+          <a class="btn-getstarted" href="/start"
+            ><i class="bi bi-person" style="font-size: 18px"></i> Sign In</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+                <div class="company-badge mb-4">
+                  <i class="bi bi-gear-fill me-2"></i>
+                  Streamline Your College Admissions, Effortlessly.
+                </div>
+
+                <h1 class="mb-4">
+                  Welcome to <br />
+                  <span class="accent-text">Inquiry Handler</span>
+                </h1>
+
+                <p class="mb-4 mb-md-5">
+                  Inquiry Handler streamlines college admissions inquiries by
+                  connecting colleges, faculty, and counselors, ensuring a
+                  seamless experience for prospective students.
+                </p>
+
+                <div class="hero-buttons">
+                  <a
+                    href="/collegeRegister"
+                    class="btn btn-primary me-0 me-sm-2 mx-1"
+                    >Register Your College Now!!!</a
+                  >
+                  <!-- <a
+                    href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                    class="btn btn-link mt-2 mt-sm-0 glightbox"
+                  >
+                    <i class="bi bi-play-circle me-1"></i>
+                    Play Video
+                  </a> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+                <img
+                  src="indexAssets/img/illustration-1.webp"
+                  alt="Hero Image"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row stats-row gy-4 mt-5"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <i class="bi bi-trophy"></i>
+                </div>
+                <div class="stat-content">
+                  <h4>15x Colleges Connected</h4>
+                  <p class="mb-0">
+                    Streamlining admissions inquiries effortlessly
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <i class="bi bi-briefcase"></i>
+                </div>
+                <div class="stat-content">
+                  <h4>12k Inquiries Handled</h4>
+                  <p class="mb-0">Ensuring real-time responses and support</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <i class="bi bi-graph-up"></i>
+                </div>
+                <div class="stat-content">
+                  <h4>50k Students Engaged</h4>
+                  <p class="mb-0">Personalized guidance for better decisions</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <i class="bi bi-award"></i>
+                </div>
+                <div class="stat-content">
+                  <h4>20x Faculty Assisted</h4>
+                  <p class="mb-0">
+                    Organizing and tracking inquiries seamlessly
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 align-items-center justify-content-between">
+            <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+              <span class="about-meta">MORE ABOUT US</span>
+              <h2 class="about-title">Inquiry Handler</h2>
+              <p class="about-description">
+                Inquiry Handler simplifies college admissions by connecting
+                colleges, faculty, and counselors, ensuring a seamless
+                experience for students. Its user-friendly platform efficiently
+                manages inquiries with real-time responses and personalized
+                support. It enhances communication, tracks inquiries, and
+                leverages technology to make the admissions process more
+                transparent and accessible.
+              </p>
+
+              <div class="row feature-list-wrapper">
+                <div class="col-md-6">
+                  <ul class="feature-list">
+                    <li>
+                      <i class="bi bi-arrow-right-circle-fill"></i> Streamlined
+                      Inquiry Process
+                    </li>
+                    <li>
+                      <i class="bi bi-arrow-right-circle-fill"></i>
+                      User-Friendly Interface
+                    </li>
+                    <li>
+                      <i class="bi bi-arrow-right-circle-fill"></i> Efficient
+                      Query Handling
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="feature-list">
+                    <li>
+                      <i class="bi bi-arrow-right-circle-fill"></i> Enhanced
+                      Communication
+                    </li>
+                    <li>
+                      <i class="bi bi-arrow-right-circle-fill"></i> Inquiry
+                      Tracking Easily
+                    </li>
+                    <li>
+                      <i class="bi bi-arrow-right-circle-fill"></i> Simplified
+                      Admissions Process
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- <div class="info-wrapper">
+                <div class="row gy-4">
+                  <div class="col-lg-5">
+                    <div class="profile d-flex align-items-center gap-3">
+                      <img
+                        src="indexAssets/img/avatar-1.webp"
+                        alt="CEO Profile"
+                        class="profile-image"
+                      />
+                      <div>
+                        <h4 class="profile-name">Niket Patel</h4>
+                        <p class="profile-position">CEO &amp; Founder</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="contact-info d-flex align-items-center gap-2">
+                      <i class="bi bi-telephone-fill"></i>
+                      <div>
+                        <p class="contact-label">Call us anytime</p>
+                        <p class="contact-number">+123 456-789</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+
+            <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="image-wrapper">
+                <div
+                  class="images position-relative"
+                  data-aos="zoom-out"
+                  data-aos-delay="400"
+                >
+                  <img
+                    src="indexAssets/img/about-5.webp"
+                    alt="Business Meeting"
+                    class="img-fluid main-image rounded-4"
+                  />
+                  <img
+                    src="indexAssets/img/about-2.webp"
+                    alt="Team Discussion"
+                    class="img-fluid small-image rounded-4"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Features Section -->
+      <section id="features" class="features section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Features</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="d-flex justify-content-center">
+            <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+              <li class="nav-item">
+                <a
+                  class="nav-link active show"
+                  data-bs-toggle="tab"
+                  data-bs-target="#features-tab-1"
+                >
+                  <h4>College</h4>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#features-tab-2"
+                >
+                  <h4>Faculty</h4>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#features-tab-3"
+                >
+                  <h4>Counselors</h4>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+            <div class="tab-pane fade active show" id="features-tab-1">
+              <div class="row">
+                <div
+                  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                >
+                  <h3>For Colleges</h3>
+                  <p class="fst-italic">
+                    Empowering institutions to manage their admissions process
+                    seamlessly.
+                  </p>
+                  <ul>
+                    <li>
+                      <i class="bi bi-arrow-right"></i>
+                      <span
+                        ><strong> Manage Faculty and Counselors</strong> –
+                        Easily add, remove, and oversee your team with
+                        role-based access and performance tracking.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-arrow-right"></i>
+                      <span
+                        ><strong> Dashboard Overview</strong> – Get a
+                        centralized view of all inquiries, track progress, and
+                        monitor counselor performance with real-time
+                        updates.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                  <img
+                    src="indexAssets/img/features-illustration-1.jpg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- End tab content item -->
+
+            <div class="tab-pane fade" id="features-tab-2">
+              <div class="row">
+                <div
+                  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                >
+                  <h3>For Faculty</h3>
+                  <p class="fst-italic">
+                    Efficient tools to handle and allocate student inquiries.
+                  </p>
+                  <ul>
+                    <li>
+                      <i class="bi bi-arrow-right"></i>
+                      <span
+                        ><strong> Inquiry Form Submission</strong> – Submit
+                        structured inquiry forms with detailed student
+                        information and required documentation.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-arrow-right"></i>
+                      <span
+                        ><strong> Allocate Inquiries</strong> – Assign inquiries
+                        to the right counselors based on workload, expertise,
+                        and student preferences.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                  <img
+                    src="indexAssets/img/features-illustration-2.jpg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- End tab content item -->
+
+            <div class="tab-pane fade" id="features-tab-3">
+              <div class="row">
+                <div
+                  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                >
+                  <h3>For Counselors</h3>
+                  <p class="fst-italic">
+                    Helping counselors provide accurate guidance to students.
+                  </p>
+                  <ul>
+                    <li>
+                      <i class="bi bi-arrow-right"></i>
+                      <span
+                        ><strong> Verify Student Information</strong> – Ensure
+                        the accuracy of student data by cross-checking submitted
+                        details and validating credentials.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="bi bi-arrow-right"></i>
+                      <span
+                        ><strong>Status Management</strong> – Seamlessly update
+                        inquiry statuses, track progress, and provide timely
+                        updates to students.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                  <img
+                    src="indexAssets/img/features-illustration-3.jpg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- End tab content item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Features Section -->
+
+      <!-- Pricing Section -->
+      <section id="HIW" class="pricing section light-background features-cards">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>How It Works</h2>
+        </div>
+        <div id="features-cards">
+          <div class="container">
+            <div class="row gy-4">
+              <div
+                class="col-xl-3 col-md-6"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div class="feature-box orange">
+                  <i class="bi bi-journal-text"></i>
+                  <h4>Faculty Submits Inquiry</h4>
+                  <p>
+                    Faculty members fill out and submit detailed inquiry forms
+                    with all necessary information.
+                  </p>
+                </div>
+              </div>
+              <!-- End Feature Box -->
+
+              <div
+                class="col-xl-3 col-md-6"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div class="feature-box blue">
+                  <i class="bi bi-people"></i>
+                  <h4>Inquiry Allocation</h4>
+                  <p>
+                    Faculty assigns the submitted inquiries to designated
+                    counselors for further review.
+                  </p>
+                </div>
+              </div>
+              <!-- End Feature Box -->
+
+              <div
+                class="col-xl-3 col-md-6"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <div class="feature-box green">
+                  <i class="bi bi-file-earmark-check"></i>
+                  <h4>Counselor Verification</h4>
+                  <p>
+                    Counselors review and verify the provided information to
+                    ensure data accuracy and completeness.
+                  </p>
+                </div>
+              </div>
+              <!-- End Feature Box -->
+
+              <div
+                class="col-xl-3 col-md-6"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+              >
+                <div class="feature-box red">
+                  <i class="bi bi-check-circle"></i>
+                  <h4>Status Updates</h4>
+                  <p>
+                    Counselors update the status of each inquiry (e.g., Pending,
+                    Verified, Resolved, or Closed) for transparency.
+                  </p>
+                </div>
+              </div>
+              <!-- End Feature Box -->
+            </div>
+          </div>
+        </div>
+        <!-- End Section Title -->
+      </section>
+
+      <!-- Stats Section -->
+      <section id="stats" class="stats section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <!-- Inquiries Managed -->
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="1200"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                  aria-label="Number of Inquiries Managed"
+                ></span>
+                <p>Inquiries Managed</p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <!-- Registrations Processed -->
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="850"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                  aria-label="Number of Registrations Processed"
+                ></span>
+                <p>Registrations Processed</p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <!-- Hours of Support -->
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="5000"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                  aria-label="Hours of Support Provided"
+                ></span>
+                <p>Hours of Support</p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <!-- Institutions Served -->
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="15"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                  aria-label="Number of Institutions Served"
+                ></span>
+                <p>Institutions Served</p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+          </div>
+        </div>
+      </section>
+
+      <!-- /Stats Section -->
+
+      <!-- Faq Section -->
+      <section id="FAQ" class="faq-9 faq section light-background" id="faq">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>FAQ</h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5" data-aos="fade-up">
+              <h2 class="faq-title">Have a question? Check out the FAQ</h2>
+              <p class="faq-description">
+                Inquiry Handler simplifies the admissions process by offering
+                efficient inquiry management, enhanced communication, and
+                real-time support. Below are answers to common questions about
+                how it works.
+              </p>
+              <div
+                class="faq-arrow d-none d-lg-block"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <svg
+                  class="faq-arrow"
+                  width="200"
+                  height="211"
+                  viewBox="0 0 200 211"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+              <div class="faq-container">
+                <div class="faq-item faq-active">
+                  <h3>What is Inquiry Handler?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Inquiry Handler is a user-friendly platform designed to
+                      simplify college admissions by connecting colleges,
+                      faculty, and counselors. It streamlines the inquiry
+                      process and ensures personalized support with real-time
+                      responses.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End FAQ item-->
+
+                <div class="faq-item">
+                  <h3>
+                    How does Inquiry Handler streamline the inquiry process?
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      Inquiry Handler provides a structured process that
+                      efficiently manages inquiries. It tracks inquiries in
+                      real-time, improves communication, and simplifies the
+                      admissions journey for all stakeholders.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End FAQ item-->
+
+                <div class="faq-item">
+                  <h3>Who can use Inquiry Handler?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Inquiry Handler is designed for colleges, faculty, and
+                      counselors. It helps colleges manage inquiries, enables
+                      faculty to allocate them, and allows counselors to verify
+                      and respond efficiently.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End FAQ item-->
+
+                <div class="faq-item">
+                  <h3>What features make Inquiry Handler unique?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Key features include: - Streamlined inquiry process
+                      management - User-friendly interface - Efficient query
+                      handling - Enhanced communication - Transparent inquiry
+                      tracking - Simplified admissions process
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End FAQ item-->
+
+                <div class="faq-item">
+                  <h3>How does Inquiry Handler enhance communication?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Inquiry Handler centralizes communication, ensuring
+                      seamless interactions between colleges, faculty, and
+                      counselors. It also enables real-time updates to inquiries
+                      for transparency and efficiency.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End FAQ item-->
+
+                <div class="faq-item">
+                  <h3>Is Inquiry Handler easy to use?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Yes, Inquiry Handler is designed with a user-friendly
+                      interface that makes it easy for colleges, faculty, and
+                      counselors to navigate and use its features effectively.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End FAQ item-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /Faq Section -->
+
+      <!-- Call To Action 2 Section -->
+      <section
+        id="call-to-action-2"
+        class="call-to-action-2 section dark-background"
+      >
+        <div class="container">
+          <div
+            class="row justify-content-center"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="col-xl-10">
+              <div class="text-center">
+                <h3>Register Free for Your College</h3>
+                <p>
+                  Experience the power of our system and save your precious
+                  time. Register now and streamline your college admissions
+                  process effortlessly!
+                </p>
+                <a class="cta-btn" href="/collegeRegister">Register Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /Call To Action 2 Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>
+            Reach out to us for any college admission-related inquiries or
+            assistance.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row g-4 g-lg-5">
+            <div class="col-lg-5">
+              <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+                <h3>Contact Info</h3>
+                <p>
+                  We're here to assist you with all your college admission
+                  inquiries. Feel free to get in touch with us.
+                </p>
+
+                <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                  <div class="icon-box">
+                    <i class="bi bi-geo-alt"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Our Location</h4>
+                    <p>905, Shalin Complex, Sector 11,</p>
+                    <p>Gandhinagar, Gujarat - 382011, India</p>
+                  </div>
+                </div>
+
+                <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                  <div class="icon-box">
+                    <i class="bi bi-telephone"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Phone Number</h4>
+                    <p>+91 93277 48151</p>
+                  </div>
+                </div>
+
+                <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                  <div class="icon-box">
+                    <i class="bi bi-envelope"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Email Address</h4>
+                    <p>info@inquiryhandler.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+                <h3>Get In Touch</h3>
+                <p>
+                  Have a question? Fill out the form below, and we'll get back
+                  to you as soon as possible.
+                </p>
+
+                <form action="contactUs" method="post">
+                  <div class="row gy-4">
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        placeholder="Your Name"
+                        required=""
+                      />
+                    </div>
+
+                    <div class="col-md-6">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        placeholder="Your Email"
+                        required=""
+                      />
+                    </div>
+
+                    <div class="col-12">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="subject"
+                        placeholder="Subject"
+                        required=""
+                      />
+                    </div>
+
+                    <div class="col-12">
+                      <textarea
+                        class="form-control"
+                        name="message"
+                        rows="4"
+                        placeholder="Message"
+                        required=""
+                      ></textarea>
+                    </div>
+
+                    <div class="col-12 text-center">
+                      <button type="submit" class="btn">Send Message</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /Contact Section -->
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <!-- Footer About Section -->
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Inquiry Handler</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>905, Shalin Complex</p>
+              <p>Sector 11, Gandhinagar, Gujarat - 382011, India</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+91 93277 48151</span>
+              </p>
+              <p>
+                <strong>Email:</strong> <span>info@inquiryhandler.com</span>
+              </p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <!-- Useful Links -->
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#privacy-policy">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Our Services -->
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">College Admission Support</a></li>
+              <li><a href="#">Counseling</a></li>
+              <li><a href="#">Application Assistance</a></li>
+              <li><a href="#">Guidance for Scholarships</a></li>
+              <li><a href="#">Documentation Support</a></li>
+            </ul>
+          </div>
+
+          <!-- Placeholder Section 1 (Optional for Future Content) -->
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Guides</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+
+          <!-- Placeholder Section 2 (Optional for Future Content) -->
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#">Career Opportunities</a></li>
+              <li><a href="#">Partnerships</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Success Stories</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Inquiry Handler</strong>
+          <span>All Rights Reserved</span>
+        </p>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="indexAssets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="indexAssets/vendor/php-email-form/validate.js"></script>
+    <script src="indexAssets/vendor/aos/aos.js"></script>
+    <script src="indexAssets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="indexAssets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="indexAssets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+    <!-- Main JS File -->
+    <script src="indexAssets/js/main.js"></script>
+  </body>
+</html>
